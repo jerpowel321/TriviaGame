@@ -1,0 +1,74 @@
+html {
+   
+    height: 100%;
+}
+h1, h2 {
+    text-align: center;
+    color: 	#0000A0;
+    text-shadow: 2px 2px 3px black;
+    
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+#innerWrapper {
+    width: 700px;
+    margin: auto;
+  
+}
+
+#house {
+    background-image: url("../images/house.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+#start, #done {
+    background: #44E5E7;
+    padding: 10px 20px;
+    margin-left: auto;
+    color: #0000A0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid rgb(39, 10, 204);
+    border-radius: 10px;
+    justify-content: left;
+    display: inline;
+    margin-left: 45%;
+    text-align: center;
+}
+
+
+.img {
+    text-align: center;
+    
+}
+
+.radio {
+    display: inline;
+    margin-left: 50px;
+}
+
+#score {
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+.score {
+    background-image: url("../images/done.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-color: black;
+}
