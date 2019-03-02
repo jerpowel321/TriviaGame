@@ -19,7 +19,7 @@ var quiz = [
         Q: "3. Which of the following is not an episode title of House MD?",
         A: ["The Mistake", "Top Secret", "It's a Wonderful Lie", "Burning Questions"],
         correctA: "Burning Questions",
-        Image: "assets/images/image2.jpg"
+        Image: "assets/images/image3.jpg"
 
     },
 
@@ -78,19 +78,20 @@ var game = {
     correct: 0,
     incorrect: 0,
     unanswered: 0,
-    counter: 100,
+    counter: 60,
 
     countDown: function () {
         game.counter--
         $("#countDown").html(game.counter)
         if (game.counter === 0) {
             console.log("Time's Up!")
+            game.UserChoice();
             game.done()
         }
     },
     start: function () {
         timer = setInterval(game.countDown, 1000)
-        $("#innerWrapper").prepend("<h2> Time Remaining: <span id = 'countDown'> 100 </span> Seconds </h2>")
+        $("#innerWrapper").prepend("<h2> Time Remaining: <span id = 'countDown'> 60 </span> Seconds </h2>")
         $("#house").css('background-image', 'none').css('background-color', '#59D2FE');
         $("#start").remove()
         for (var i = 0; i < quiz.length; i++) {
@@ -119,7 +120,6 @@ var game = {
                 game.incorrect++
             }
         }
-        //$("#movies-view").empty();
     },
 
     done: function () {
@@ -134,13 +134,13 @@ var game = {
     },
 
     result: function () {
-       $("#scoreCorrect").append("<p>Correct Answers: " + game.correct + "</p>");
-       $("#scoreIncorrect").append("<p>Incorrect Answers: " + game.incorrect + "</p>");
-       $("#scoreUnanswered").append("<p>Unanswered Questions: " + game.unanswered + "</p>");
-       $("#endMessage").append("<p>Great Game! </p>");
-       console.log("Correct: " + game.correct);
-       console.log("Incorrect: " + game.incorrect);
-       console.log("No Guess: " + game.unanswered);
+        $("#scoreCorrect").append("<p>Correct Answers: " + game.correct + "</p>");
+        $("#scoreIncorrect").append("<p>Incorrect Answers: " + game.incorrect + "</p>");
+        $("#scoreUnanswered").append("<p>Unanswered Questions: " + game.unanswered + "</p>");
+        $("#endMessage").append("<p>Great Game! </p>");
+        console.log("Correct: " + game.correct);
+        console.log("Incorrect: " + game.incorrect);
+        console.log("No Guess: " + game.unanswered);
     },
 }
 
